@@ -1,0 +1,36 @@
+body{
+  background: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial;
+}
+
+.container{
+  display: flex;
+  gap: 30px;
+}
+
+.personagem{
+  text-align: center;
+}
+
+.emoji{
+  width: 120px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.emoji:hover{
+  transform: scale(1.05);
+}
+
+.bloqueado{
+  opacity: 0.5;
+}
+
+.contador{
+  color: white;
+  font-size: 30px;
+}

@@ -1,12 +1,12 @@
-let caras = document.querySelectorAll(".cara");
+let emojis = document.querySelectorAll(".emoji");
 let contadores = document.querySelectorAll(".contador");
 
-caras.forEach(function(cara, i){
+emojis.forEach(function(emoji, i){
 
   let numero = 0;
   let bloqueado = false;
 
-  cara.onclick = function(){
+  emoji.onclick = function(){
 
     if(bloqueado){
       return;
@@ -16,11 +16,11 @@ caras.forEach(function(cara, i){
     contadores[i].innerHTML = numero;
 
     bloqueado = true;
-    cara.classList.add("bloqueado");
+    emoji.classList.add("bloqueado");
 
     setTimeout(function(){
       bloqueado = false;
-      cara.classList.remove("bloqueado");
+      emoji.classList.remove("bloqueado");
     }, 2000);
 
   }
