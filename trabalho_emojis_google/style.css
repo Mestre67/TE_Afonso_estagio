@@ -1,10 +1,16 @@
 body{
   background: #111;
-  display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   font-family: Arial;
+}
+main{
+  display: flex;
+}
+.centro{
+    text-align: center;
+    color: rgba(255, 166, 0, 0.904)
 }
 
 .container{
@@ -14,6 +20,13 @@ body{
 
 .personagem{
   text-align: center;
+  
+}
+
+.logo{
+  text-align: left;
+  
+  height:100px;
 }
 
 .emoji{
