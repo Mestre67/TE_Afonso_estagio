@@ -112,11 +112,12 @@
   }
  
   .question {
-    font-size: 20px;
+    font-size: 27px;
     font-weight: 500;
     color: var(--text);
     margin-bottom: 36px;
     line-height: 1.4;
+    
   }
 
   .logo{
@@ -215,8 +216,6 @@
    
   }
 
-
- 
   .btn-submit::after {
     content: '';
     position: absolute;
