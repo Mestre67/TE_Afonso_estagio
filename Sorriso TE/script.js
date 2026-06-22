@@ -6,6 +6,29 @@ const LEVELS = [
     { val: 4, emoji: '😊', label: 'Satisfeito',         barClass: 'bar-4' },
     { val: 5, emoji: '🤩', label: 'Muito Satisfeito',   barClass: 'bar-5' },
   ];
+
+let editando = false;
+
+
+function toggleEdicao() 
+{
+    const Texto = document.querySelectorAll(".question");
+    editando = !editando;
+
+    if (editando) {
+        Texto.forEach(Texto => {
+            
+          Texto.contentEditable = "true";
+            Texto.style.border = "1px dashed #ccc"; // opcional (visual)
+        });
+    } else {
+        Texto.forEach(Texto => {
+            Texto.contentEditable = "false";
+            Texto.style.border = "none";
+        });
+    }
+  } 
+
  
   // Load votes from localStorage
   function carregarVotos() {
