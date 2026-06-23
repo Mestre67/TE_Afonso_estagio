@@ -10,7 +10,7 @@ const LEVELS = [
 let editando = false;
 
 
-const codigoCorreto = "000000"; // código que vais exigir
+const codigoCorreto = "000000";
 
 
 function pedirCodigo() {
@@ -42,7 +42,7 @@ function toggleEdicao() {
         if (!acesso) return;
     }
 
-    const textos = document.querySelectorAll(".question");
+    const textos = document.querySelectorAll(".edit");
     editando = !editando;
 
     textos.forEach(texto => {
@@ -110,8 +110,11 @@ function toggleEdicao() {
 </div>`;
     }).join('');
   }
- 
-  function exportarCSV() {
+
+function exportarCSV() {
+  const acesso = pedirCodigo();
+  if (!acesso) return;
+
   const votos = carregarVotos();
   if (votos.length === 0) {
     mostrarToast('Sem dados para exportar.', '#f97316');
@@ -145,9 +148,15 @@ function toggleEdicao() {
   mostrarToast('CSV exportado!', 'green');
 }
 
+
  
   function limparDados() {
-    if (!confirm('Tens a certeza que queres apagar todos os dados?')) return;
+
+  const acesso = pedirCodigo();
+  if (!acesso) return;
+
+
+    if (!confirm('Tem a certeza que quer apagar todos os dados?')) return;
     localStorage.removeItem('satisfacao_votos');
     renderStats();
     mostrarToast('🗑 Dados apagados.', '#f97316');

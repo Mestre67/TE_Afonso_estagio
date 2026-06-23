@@ -67,7 +67,7 @@
     font-weight: 800;
     line-height: 1.1;
     letter-spacing: -1px;
-    color: var(--text);
+    color: linear-gradient(135deg, var(--accent-1), var(--accent-2));
     text-align: center;
   }
  
@@ -134,7 +134,8 @@
     align-items: center;
     flex-wrap: nowrap; 
     width: 100%;
-    max-width: 60%;
+    max-width: 80%;
+    max-height: 80%;
   }
  
   .option input[type="radio"] { display: none; }
@@ -171,19 +172,19 @@
   }
  
   .emoji {
-    font-size: 120px;
+    font-size: 200px;
     line-height: 1;
     transition: transform 0.2s ease;
     filter: grayscale(0.3);
   }
  
   .option input:checked + label .emoji {
-    transform: scale(1.2);
+    transform: scale(1.1);
     filter: grayscale(0);
   }
  
   .label-text {
-    font-size: 24px;
+    font-size: 27px;
     font-weight: 600;
     letter-spacing: 0.5px;
     text-transform: uppercase;
