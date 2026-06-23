@@ -52,7 +52,7 @@
  
   .tag {
     text-align: center;
-    font-size: 11px;
+    font-size: 18px;
     font-weight: 600;
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -63,7 +63,7 @@
  
   header h1 {
     font-family: 'Syne', sans-serif;
-    font-size: clamp(2rem, 6vw, 3.4rem);
+    font-size: clamp(2rem, 10vw, 4rem);
     font-weight: 800;
     line-height: 1.1;
     letter-spacing: -1px;
@@ -122,7 +122,7 @@
 
   .logo{
   left: 0;   
-  width: 150px;
+  width: 200px;
   }
   
   /* Emoji options */
@@ -364,8 +364,7 @@
   }
  
   .btn-csv:hover {
-    background: rgba(255,209,102,0.08);
-    transform: translateY(-1px);
+     border-color: #efc144; color: #efc144;;
   }
  
   .btn-clear {
@@ -390,6 +389,28 @@
  
   .btn-row { display: flex; gap: 10px; flex-wrap: wrap; text-align: center; justify-content: center; }
  
+  .btn-edit 
+  {
+     display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border: 1.5px solid var(--bg);
+    color: var(--bg);
+    background: transparent;
+    font-family: 'Syne', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .btn-edit:hover { border-color: #06d6a0; color: #06d6a0; }
+
+
   /* Animations */
   @keyframes fadeDown {
     from { opacity: 0; transform: translateY(-20px); }

@@ -10,24 +10,49 @@ const LEVELS = [
 let editando = false;
 
 
-function toggleEdicao() 
-{
-    const Texto = document.querySelectorAll(".question");
+const codigoCorreto = "000000"; // código que vais exigir
+
+
+function pedirCodigo() {
+    let codigo;
+
+    // Loop até acertar
+    while (true) {
+        codigo = prompt("Introduza o código:");
+
+        if (codigo === null) {
+            // se carregar em cancelar, sai
+            return false;
+        }
+
+        if (codigo === codigoCorreto) {
+            return true;
+        } else {
+            alert("Código incorreto! Tente novamente.");
+        }
+    }
+}
+
+function toggleEdicao() {
+    const btn = document.getElementById("btn");
+
+    if (!editando) {
+        const acesso = pedirCodigo();
+
+        if (!acesso) return;
+    }
+
+    const textos = document.querySelectorAll(".question");
     editando = !editando;
 
-    if (editando) {
-        Texto.forEach(Texto => {
-            
-          Texto.contentEditable = "true";
-            Texto.style.border = "1px dashed #ccc"; // opcional (visual)
-        });
-    } else {
-        Texto.forEach(Texto => {
-            Texto.contentEditable = "false";
-            Texto.style.border = "none";
-        });
-    }
-  } 
+    textos.forEach(texto => {
+        texto.contentEditable = editando;
+        texto.style.border = editando ? "1px dashed #ccc" : "none";
+    });
+
+    btn.innerText = editando ? "Guardar" : "Editar";
+}
+
 
  
   // Load votes from localStorage
