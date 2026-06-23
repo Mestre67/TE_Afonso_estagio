@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Avaliação de Satisfação</title> 
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        
+        <img src="img/TELogo.png" alt="Logo" class="logo">
+        <br>
+        <br>
+        <br>
+        <h1>Como foi a sua <span>experiência?</span></h1>
+        <p class="tag">A sua opinião ajuda-nos a melhorar. Obrigado pelo seu tempo.</p>
+    </header> 
+    
+    
+        
+                <div class="card">
+                    <div class=" tag">Avaliação</div>
+                        <div class="question">Qual o seu nível de satisfação com o nosso serviço?</div>
+        
+                        <div class="options">
+                            <div class="option">
+                                <input type="radio" name="rating" id="r1" value="1">
+                                <label for="r1">
+                                    <span class="emoji">😠</span>
+                                    <span class="label-text">Muito<br>Insatisfeito</span>
+                                </label>
+                        </div>
+                                <div class="option">
+                                    <input type="radio" name="rating" id="r2" value="2">
+                                    <label for="r2">
+                                        <span class="emoji">😕</span>
+                                        <span class="label-text"> <br> Insatisfeito</span>
+                                </label>
+                                </div>
+                                    <div class="option">
+                                        <input type="radio" name="rating" id="r4" value="4">
+                                        <label for="r4">
+                                            <span class="emoji">😊</span>
+                                            <span class="label-text"> <br> Satisfeito</span>
+                                        </label>
+                                    </div>
+                                        <div class="option">
+                                            <input type="radio" name="rating" id="r5" value="5">
+                                            <label for="r5">
+                                                <span class="emoji">🤩</span>
+                                                <span class="label-text">Muito<br>Satisfeito</span>
+                                            </label>
+                                        </div>
+                    </div>
+            <button class="btn-submit " id="btnVotar" onclick="votar()">Submeter avaliação</button>
+            </div>
+                                            <div class="btn-row">
+                                                <button class="btn-clear" onclick="limparDados()">🗑 Limpar</button>
+
+                                                
+                                                <button class="btn-csv" onclick="exportarCSV()">⬇ Exportar CSV</button>
+
+
+                                                <button class="btn-edit" onclick="toggleEdicao()">Editar</button>
+                                            </div>                               
+     </div>
+
+    
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+    
+<script src="script.js"></script>
+</body>
+</html>
