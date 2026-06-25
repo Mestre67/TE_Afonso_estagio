@@ -99,18 +99,10 @@ function toggleEdicao() {
     rows.innerHTML = LEVELS.map((lvl, i) => {
       const n = contagem[i];
       const pct = total > 0 ? Math.round((n / total) * 100) : 0;
-      return `
-<div class="stat-row">
-<span class="stat-emoji">${lvl.emoji}</span>
-<div class="stat-bar-wrap">
-<div class="stat-bar ${lvl.barClass}" style="width:${pct}%"></div>
-</div>
-<span class="stat-count">${n}</span>
-<span class="stat-pct">${pct}%</span>
-</div>`;
-    }).join('');
+      return 
+    }   ).join('');
   }
-
+  
 function exportarCSV() {
   const acesso = pedirCodigo();
   if (!acesso) return;
@@ -127,7 +119,9 @@ function exportarCSV() {
     `${v.data};${v.hora};${v.valor};${v.label}`
   ).join('\n');
 
-  const blob = new Blob(['\ufeff' + header + rows], {
+  const conteudoCSV = '\ufeff' + header + rows;
+
+  const blob = new Blob([conteudoCSV], {
     type: 'text/csv;charset=utf-8;'
   });
 
@@ -147,6 +141,7 @@ function exportarCSV() {
 
   mostrarToast('CSV exportado!', 'green');
 }
+
 
 
  
